@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.william.mybatis.mapper.UserMapper">
+
+    <insert id="insert" parameterType="com.william.domain.User">
+        insert into user (username, age, phone,`desc`)
+        values (#{username,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, #{phone,jdbcType=BIGINT}, #{desc,jdbcType=VARCHAR})
+    </insert>
+
+    <select id="select" resultType="com.william.domain.User">
+        select * from user where id=#{id}
+    </select>
+</mapper>
