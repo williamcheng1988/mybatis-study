@@ -31,6 +31,8 @@ public class Test {
         org.apache.ibatis.mapping.Environment environment = new org.apache.ibatis.mapping.Environment("development", transactionFactory, dataSource);
         Configuration configuration = new Configuration(environment);
         configuration.addMapper(UserMapperWithAnnotation.class);
+        //configuration.addMappers("com.william.mybatis.mapper2");
+        //configuration.addMappers("com.william.mybatis.mapper2", UserMapperWithAnnotation.class);
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);
         SqlSession session = sqlSessionFactory.openSession();
         User user = new User();

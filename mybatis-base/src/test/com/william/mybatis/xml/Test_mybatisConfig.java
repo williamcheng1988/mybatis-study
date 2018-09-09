@@ -23,8 +23,8 @@ public class Test_mybatisConfig {
         SqlSession session = sqlSessionFactory.openSession();
 
 //        addUser(session);
-//        selectUser(session);
-        selectUser2(session);
+        selectUser(session);
+//        selectUser2(session);
 
         session.commit();
         session.close();

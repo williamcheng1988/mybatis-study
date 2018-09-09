@@ -20,7 +20,7 @@ public class Test_mybatisConfig2 {
         //通过SqlSessionFactoryBuilder创建
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
         //获得session实例
-        SqlSession session = sqlSessionFactory.openSession();
+        SqlSession session = sqlSessionFactory.openSession(false);
 
         UserMapper userMapper = session.getMapper(UserMapper.class);
         User user = userMapper.select(4);

@@ -35,5 +35,6 @@ public class Test {
         UserMapperWithAnnotation userMapper = session.getMapper(UserMapperWithAnnotation.class);
         User user = userMapper.select(4);
         log.info("user:{}", user);
+        session.close();
     }
 }

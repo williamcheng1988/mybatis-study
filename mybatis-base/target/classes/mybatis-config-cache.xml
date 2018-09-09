@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!-- 配置全局性 cache 的 ( 开 / 关) default:true -->
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+
+    <environments default="DEV">
+        <environment id="DEV">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/tl-vip"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
+        <environment id="TEST">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/tl-vip"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <package name="com.william.mybatis.mapper3"/>
+    </mappers>
+</configuration>

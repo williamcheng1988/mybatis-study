@@ -2,10 +2,7 @@ package com.william.mybatis.mapper2;
 
 import com.william.domain.User;
 import com.william.mybatis.mapper.Mapper;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 /**
  * User: William Cheng

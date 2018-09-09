@@ -22,7 +22,7 @@ public class Test_mybatisConfig1 {
         //通过SqlSessionFactoryBuilder创建
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
         //获得session实例
-        SqlSession session = sqlSessionFactory.openSession();
+        SqlSession session = sqlSessionFactory.openSession(false);
 
         UserMapperWithAnnotation userMapper = session.getMapper(UserMapperWithAnnotation.class);
         User user = userMapper.select(5);
